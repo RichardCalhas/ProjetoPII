@@ -1,0 +1,89 @@
+*{
+	margin:0px;
+	padding: 0px;
+	list-style: none;
+	font-size: 1.0rem;
+	font-family: Arial;
+}
+div#corpo-tab {
+	width: 50%;
+	height: 70%;
+ 	padding-right: 15px;
+ 	padding-left: 15px;	
+	display: block;
+	text-align: left;
+}
+
+div#corpo-index {
+	width: 50%;
+	height: 70%;
+	margin: 80px;
+ 	padding-right: 15px;
+ 	padding-left: 15px;
+ 	margin-right: auto;
+ 	margin-left: auto;	
+	display: block;
+	text-align: center;
+	background-color: rgba(76,243,255,.2);
+}
+div#corpo-index input, label{
+	text-align: center;
+	padding: 2px ;
+	font-family: Arial;	
+	font-size: 20px;
+}
+div#corpo-index button{
+	width: 50%;
+	margin: 25px auto;
+	text-align: center;
+	font-family: Arial;	
+	font-size: 20px;
+}
+div#area{
+	width: 100%;
+	height: 1000%;
+	position: absolute;
+	background-color: rgba(0,0,0,.2);
+}
+div#area1{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.2);
+}
+div#edit-cad{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.2);
+	
+}
+div#edit-cad label{
+	margin: -5px auto;
+	width: 100%;
+	height: 100%;
+	text-align: left;	
+}
+div#corpo-index a{
+	display: block;
+	text-align: left;
+}
+div.msg-sucesso {
+	width: 600px;
+	margin: 10px auto;
+	padding: 10px;
+	background-color: rgba(50,205,50,.3);
+	border: 1px solid rgb(34,139,34);
+}
+body {
+	background-image: url("https://serving.photos.photobox.com/39079628b93f5f642116b8248e99b91ad93f24139853e7c96b7d4234f3980b6a9df1e120.jpg");
+  	background-repeat: no-repeat;
+  	background-position: right top 20px;
+  	background-size: 50%;   	
+}
+.perfil {
+	display: block;
+	text-align: center;
+}
+.tab{
+	
+ 	width: 50%;
+}
