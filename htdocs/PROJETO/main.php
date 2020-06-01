@@ -38,7 +38,7 @@
       <td ><?php echo $row_Cliente['telefone'];?></td>
     </tr>
     <tr>
-      <th scope="row">Endereço</th>
+      <th scope="row">Cidade</th>
       <td ><?php echo $row_Cliente['cidade'];?></td>
     </tr>
     <tr>
