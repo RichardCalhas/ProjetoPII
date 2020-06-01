@@ -38,7 +38,7 @@
       <td ><?php echo $row_Prestador['telefone'];?></td>
     </tr>
     <tr>
-      <th scope="row">Endereço</th>
+      <th scope="row">Cidade</th>
       <td ><?php echo $row_Prestador['cidade'];?></td>
     </tr>
     <tr>
