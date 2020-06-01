@@ -32,7 +32,7 @@
 				<input type="text" name="cpf" placeholder="CPF" value="<?php echo $row_Cliente['cpf'];?>" maxlength="11" class="form-control" class="form-control">
 				<label>Telefone</label>
 				<input type="text" name="telefone" placeholder="Telefone" value="<?php echo $row_Cliente['telefone'];?>" maxlength="11" class="form-control">
-				<label>Endereço</label>
+				<label>Cidade</label>
 				<input type="text" name="cidade" placeholder="Cidade" value="<?php echo $row_Cliente['cidade'];?>" maxlength="150" class="form-control">
 				
 				<button type="submit" class="btn btn-secondary btn-lg btn-block">Editar</button>
