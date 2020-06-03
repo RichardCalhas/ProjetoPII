@@ -26,7 +26,7 @@
 			if($sql->rowCount() >  0) {
 				return false;
 			} else {
-				$sql = $pdo->prepare("INSERT INTO Login(dica, email, senha, nivel) VALUES (:di, :e, :s, '1')");
+				$sql = $pdo->prepare("INSERT INTO Login(dica, email, senha, nivel) VALUES (:di, :e, :s,'1')");
 				$sql->bindValue(":di",$dica);
 				$sql->bindValue(":e",$email);
 				$sql->bindValue(":s",md5($senha));

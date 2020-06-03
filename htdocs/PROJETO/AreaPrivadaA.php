@@ -66,6 +66,7 @@
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="?page=Listar-Servicos">Listar Solicitações</a>
 							<a class="dropdown-item" href="?page=Listar-Servicos-Permitidos">Listar Permitidos</a>
+							<a class="dropdown-item" href="?page=Listar-Servicos-Desativados">Listar Desativados</a>
 						</div>
 					</li>
 				</ul>
@@ -95,6 +96,9 @@
 								break;
 								case "Listar-Servicos-Permitidos":
 									include("Listar-Servicos-Permitidos.php");
+								break;
+								case "Listar-Servicos-Desativados":
+									include("Listar-Servicos-Desativados.php");
 								break;
 								case "Logout-Administrador":
 									include("Logout-Administrador.php");

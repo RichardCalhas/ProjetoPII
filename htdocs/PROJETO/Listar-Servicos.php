@@ -26,7 +26,8 @@
 		$count = 1;
 		while($row = $res->fetch_object()){
 			print "<tr>";
-			print "<td><button class='btn btn-success' onclick=\"if(confirm('Tem certeza que deseja permitir?')){location.href='?page=Salvar-Categoria&acao=permitir&id_Servico=".$row->id_Servico."';}else{false;}\">Permitir</button></td>";
+			print "<td><button class='btn btn-success' onclick=\"if(confirm('Tem certeza que deseja permitir?')){location.href='?page=Salvar-Categoria&acao=permitir&id_Servico=".$row->id_Servico."';}else{false;}\">Permitir</button>
+			<button class='btn btn-danger' onclick=\"if(confirm('Tem certeza que deseja Desativar?')){location.href='?page=Salvar-Categoria&acao=desativarPerma&id_Servico=".$row->id_Servico."';}else{false;}\">Excluir</button></td>";
 			print "</tr>";
 			print "<th scope='col'>Status:</th><td>".$row->Status."</td>";
 			print "</tr>";

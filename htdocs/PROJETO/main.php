@@ -11,7 +11,7 @@
 	$result_Cliente = "SELECT id_Cliente, nome, sobrenome, cpf, telefone, cidade FROM Cliente WHERE id_Login=".$_SESSION['id_Cliente'];
 	$resultado_Cliente = mysqli_query($conn, $result_Cliente);
 	$row_Cliente = mysqli_fetch_assoc($resultado_Cliente);
-	$result_login = "SELECT id_Login,dica , email FROM login WHERE id_Login=".$_SESSION['id_Cliente'];
+	$result_login = "SELECT id_Login, email FROM login WHERE id_Login=".$_SESSION['id_Cliente'];
 	$resultado_login = mysqli_query($conn, $result_login);
 	$row_login = mysqli_fetch_assoc($resultado_login);
 ?>
@@ -45,11 +45,10 @@
       <th scope="row">Email</th>
       <td ><?php echo $row_login['email'];?></td>
     </tr>
-     <tr>
+    <tr>
       <th scope="row">Dica</th>
       <td ><?php echo $row_login['dica'];?></td>
     </tr>
-
   </tbody>
 </table>
 </div>

@@ -27,7 +27,7 @@
 		while($row = $res->fetch_object()){
 			print "<tr>";
 			print "<td>
-			<button class='btn btn-danger' onclick=\"if(confirm('Tem certeza que deseja Desativar?')){location.href='?page=Salvar-Categoria&acao=desativar&id_Servico=".$row->id_Servico."';}else{false;}\">Desativar</button></td>";
+			<button class='btn btn-danger' onclick=\"if(confirm('Tem certeza que deseja Desativar?')){location.href='?page=Salvar-Categoria&acao=desativarPerma&id_Servico=".$row->id_Servico."';}else{false;}\">Excluir</button></td>";
 			print "</tr>";
 			print "<th scope='col'>Status:</th><td>".$row->Status."</td>";
 			print "</tr>";

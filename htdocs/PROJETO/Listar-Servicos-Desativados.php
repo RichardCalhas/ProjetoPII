@@ -1,7 +1,15 @@
 <!DOCTYPE html>
-<h1>Meus Serviços</h1>
+<h1>Listar Serviços Desativados</h1>
 <?php
-	$sql = "SELECT * FROM servico as s inner join categoria as c on s.id_Categoria=c.id_Categoria inner join prestador as p on s.id_Prestador=p.id_Prestador WHERE id_Login=".$_SESSION['id_Prestador'];
+	if(!isset($_SESSION['id_Administrador']))
+	{
+
+		unset($_SESSION['id_Cliente']);
+		unset($_SESSION['id_Prestador']);
+		header("location: index.php");
+		exit;
+	}
+	$sql = "SELECT * FROM servico as s inner join categoria as c on s.id_Categoria=c.id_Categoria inner join prestador as p on s.id_Prestador=p.id_Prestador WHERE status='Desativado' ";
 	
 	$res = $conn->query($sql) or die($conn->error);
 	
@@ -9,7 +17,6 @@
 	
 	if($qtd > 0){
 		print "<p>Encontrou <b>$qtd</b> resultados</p>";
-		print "<div class='tab'>";
 		print "<table class='table table-borderless table-dark'>";
 		print "<tr>";
    		print "<thead>" ;    	
@@ -20,7 +27,7 @@
 		while($row = $res->fetch_object()){
 			print "<tr>";
 			print "<td>
-			<button class='btn btn-danger' onclick=\"if(confirm('Tem certeza que deseja Desativar?')){location.href='?page=Salvar-Categoria&acao=desativarPerma&id_Servico=".$row->id_Servico."';}else{false;}\">Excluir</button></td>";
+			<button class='btn btn-success' onclick=\"if(confirm('Tem certeza que deseja permitir?')){location.href='?page=Salvar-Categoria&acao=permitir&id_Servico=".$row->id_Servico."';}else{false;}\">Permitir</button></td>";
 			print "</tr>";
 			print "<th scope='col'>Status:</th><td>".$row->Status."</td>";
 			print "</tr>";
@@ -36,13 +43,10 @@
 			print "</tr>";
 			print "<th scope='col'>Valor:</th><td>".$row->Valor."</td>";
 			print "</tr>";
-			print "<th scope='col'>ID Serviço:</th><td>".$row->id_Servico."</td>";
-			print "</tr>";
 			print "<th colspan='2'>=======================================================================</th>";
 			print "</tr>";
 		}
 		print "</table>";
-		print "</div>";
 	}else{
 		print "Nenhum dado encontrado";
 	}

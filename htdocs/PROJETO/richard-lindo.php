@@ -9,6 +9,7 @@
 			<title>
 				Projeto
 			</title>
+			<link rel="stylesheet" type="text/css" href="./css/estylo.css">
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.css">
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	</head>
