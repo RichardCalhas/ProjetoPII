@@ -10,10 +10,10 @@
 	}
 	require_once './CLASSES/Administrador.php';
 	include_once("config.php");
-	$result_Administrador = "SELECT id_Administrador,dica, nome FROM Administrador WHERE id_Login=".$_SESSION['id_Administrador'];
+	$result_Administrador = "SELECT id_Administrador, nome FROM Administrador WHERE id_Login=".$_SESSION['id_Administrador'];
 	$resultado_Administrador = mysqli_query($conn, $result_Administrador);
 	$row_Administrador = mysqli_fetch_assoc($resultado_Administrador);
-	$result_login = "SELECT id_Login, email FROM login WHERE id_Login=".$_SESSION['id_Administrador'];
+	$result_login = "SELECT id_Login,dica, email FROM login WHERE id_Login=".$_SESSION['id_Administrador'];
 	$resultado_login = mysqli_query($conn, $result_login);
 	$row_login = mysqli_fetch_assoc($resultado_login);
 ?>
