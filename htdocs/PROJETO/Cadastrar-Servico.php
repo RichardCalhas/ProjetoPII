@@ -48,7 +48,7 @@
 					?>
 					</select>
 					</div>
-						<button type="submit" class="btn btn-primary btn-lg btn-block">Cadastrar</button>				
+						<button type="submit" class="btn btn-primary btn-lg btn-block">Solicitar</button>				
 					</form>				
 					</div>
 			<?php
