@@ -16,7 +16,7 @@
 			}
 
 		}
-		public function cadastrar($nome, $email, $senha, $dica)
+		public function cadastrar($nome, $dica, $email, $senha)
 		{
 			global $pdo;
 			$sql = $pdo->prepare("SELECT id_Login FROM login WHERE email = :e");
