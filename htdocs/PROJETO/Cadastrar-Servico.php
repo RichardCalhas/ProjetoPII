@@ -58,6 +58,10 @@
 					$valor = addslashes($_POST['valor']);
 					$idPrestador = addslashes($_POST['idPrestador']);
 					$idCategoria = addslashes($_POST['idCategoria']);
+					if($idCategoria == "== Selecione uma Categoria =="){
+								$idCategoria = NULL;
+
+							}
 					if(!empty($descricao) && !empty($valor) && !empty($idPrestador) && !empty($idCategoria))
 					{
 						$p->conectar("Projeto","localhost", "root","");
